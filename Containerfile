@@ -1,3 +1,8 @@
+LABEL org.opencontainers.image.source=https://github.com/frie321984/devbox
+LABEL org.opencontainers.image.description="Image um auf jedem Rechner mit docker oder podman eine Entwicklungsumgebung zu haben"
+LABEL org.opencontainers.image.licenses=Apache-2.0
+LABEL org.opencontainers.image.authors="frie321984"
+
 FROM fedora:latest
 
 # Installation of multiple layers - each RUN is cached separately
