@@ -31,5 +31,5 @@ jobs:
         run: |
           git config --global user.email "frie321984@googlemail.com"
           git config --global user.name "Release Bot"
-          git tag -fa ${{ github.sha }} -m "Update tag"
-          git push origin ${{github.sha}} --force
+          git tag -fa v2 -m "Update tag"
+          git push origin v2 --force
