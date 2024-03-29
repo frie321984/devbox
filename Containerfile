@@ -20,7 +20,7 @@ RUN dnf install -y vim-enhanced
 RUN dnf install -y make
 RUN dnf install -y tree
 RUN dnf install -y rsync
-RUN dnf install -y buildah
+RUN dnf install -y openssh
 
 # python packages
 RUN pip3 install pelican
@@ -34,16 +34,9 @@ RUN git clone https://github.com/frie321984/shellshaper && \
     cp /shellshaper/.gitshortcuts.bashrc ~ && \
     cat /shellshaper/bashrc-appendix >> ~/.bashrc 
 
-RUN groupadd nonroot  \
-  && useradd -c 'default user' -g nonroot lisa
-
-# https://www.deutschlandfunkkultur.de/frauen-informatik-programmieren-geschichte-100.html
-USER lisa
-
 # Set the working directory
 WORKDIR /workspace
 
 # Start bash shell
 CMD ["/bin/bash"]
-
 
