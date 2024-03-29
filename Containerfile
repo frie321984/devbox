@@ -31,6 +31,8 @@ RUN chsh -s /bin/bash lisa
 # https://www.deutschlandfunkkultur.de/frauen-informatik-programmieren-geschichte-100.html
 USER lisa
 
+COPY .gitconfig /home/lisa/.gitconfig
+
 # Set the working directory
 WORKDIR /workspace
 
