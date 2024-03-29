@@ -22,6 +22,7 @@ RUN dnf install -y make
 RUN dnf install -y tree
 RUN dnf install -y rsync
 RUN dnf install -y openssh
+RUN dnf install -y lftp
 
 # python packages
 RUN pip3 install pelican
