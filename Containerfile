@@ -23,6 +23,8 @@ RUN dnf install -y tree
 RUN dnf install -y rsync
 RUN dnf install -y openssh
 RUN dnf install -y lftp
+RUN dnf install -y hugo
+RUN dnf install -y npm
 
 # python packages
 RUN pip3 install pelican
