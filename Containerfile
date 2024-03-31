@@ -25,6 +25,7 @@ RUN dnf install -y openssh
 RUN dnf install -y lftp
 RUN dnf install -y hugo
 RUN dnf install -y npm
+RUN dnf install -y fish
 
 # python packages
 RUN pip3 install pelican
@@ -40,6 +41,8 @@ RUN git clone https://github.com/frie321984/shellshaper && \
 
 RUN mkdir -p ~/.ssh
 COPY ssh/known_hosts ~/.ssh/
+
+RUN dnf install -y ImageMagick
 
 # Set the working directory
 WORKDIR /workspace
