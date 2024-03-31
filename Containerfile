@@ -25,6 +25,7 @@ RUN dnf install -y openssh
 RUN dnf install -y lftp
 RUN dnf install -y hugo
 RUN dnf install -y npm
+RUN dnf install -y fish
 
 # python packages
 RUN pip3 install pelican
