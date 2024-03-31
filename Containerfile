@@ -42,6 +42,8 @@ RUN git clone https://github.com/frie321984/shellshaper && \
 RUN mkdir -p ~/.ssh
 COPY ssh/known_hosts ~/.ssh/
 
+RUN dnf install -y ImageMagick
+
 # Set the working directory
 WORKDIR /workspace
 
