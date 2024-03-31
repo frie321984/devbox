@@ -38,8 +38,8 @@ RUN git clone https://github.com/frie321984/shellshaper && \
     cp /shellshaper/.gitshortcuts.bashrc ~ && \
     cat /shellshaper/bashrc-appendix >> ~/.bashrc 
 
-RUN mkdir -p ~/.ssh && \
-    cp ssh/known_hosts ~/.ssh/known_hosts
+RUN mkdir -p ~/.ssh
+COPY ssh/known_hosts ~/.ssh/
 
 # Set the working directory
 WORKDIR /workspace
