@@ -47,6 +47,8 @@ RUN dnf install -y ImageMagick
 # Set the working directory
 WORKDIR /workspace
 
+RUN npm install --global tailwindcss
+
 # Start bash shell
 CMD ["/bin/bash"]
 
