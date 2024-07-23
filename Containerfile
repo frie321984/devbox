@@ -47,6 +47,7 @@ RUN dnf install -y ImageMagick
 WORKDIR /workspace
 
 RUN npm install --global tailwindcss
+RUN npm install --global html-minifier
 
 # Start bash shell
 CMD ["/bin/bash"]
