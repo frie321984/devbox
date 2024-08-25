@@ -5,7 +5,6 @@ LABEL org.opencontainers.image.description "Image um auf jedem Rechner mit docke
 LABEL org.opencontainers.image.licenses Apache-2.0
 LABEL org.opencontainers.image.authors "frie321984"
 
-
 # Installation of multiple layers - each RUN is cached separately
 RUN dnf install -y bash
 RUN dnf install -y python3 python3-pip
@@ -37,9 +36,6 @@ RUN git clone https://github.com/frie321984/shellshaper && \
     cp /shellshaper/.vimrc ~/.vimrc && \
     cp /shellshaper/.gitshortcuts.bashrc ~ && \
     cat /shellshaper/bashrc-appendix >> ~/.bashrc 
-
-RUN mkdir -p ~/.ssh
-COPY ssh/known_hosts ~/.ssh/
 
 RUN dnf install -y ImageMagick
 
